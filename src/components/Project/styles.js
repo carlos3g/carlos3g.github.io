@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.a`
+export const Container = styled.a.attrs({
+  target: '_blank',
+})`
   background-color: #202022;
   color: var(--color-text);
   text-decoration: none;
