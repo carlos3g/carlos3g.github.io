@@ -1,3 +1,8 @@
+:root {
+  --color-background: #282a36;
+  --color-text: #f8f8f2;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +14,19 @@ body,
   height: 100vh;
 }
 
+body {
+  background-color: var(--color-background);
+}
+
 #root {
   display: flex;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 400 16px;
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-text);
 }
