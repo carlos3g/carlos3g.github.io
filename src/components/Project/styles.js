@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import starSVG from '../../assets/icons/star.svg';
+
 export const Container = styled.a.attrs({
   target: '_blank',
 })`
@@ -49,7 +51,12 @@ export const StarsContainer = styled.div`
   align-items: center;
 `;
 
-export const StartIcon = styled.div``;
+export const StartIcon = styled.img.attrs({
+  src: starSVG,
+  width: 12,
+})`
+  margin: 0 5px 4px 0;
+`;
 
 export const StarLabel = styled.span`
   font-weight: 600;
