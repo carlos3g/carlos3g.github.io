@@ -30,6 +30,13 @@ const projects = [
     title: 'bugs-evolution',
     description: 'Simple game created to teach the theory of evolution',
   },
+  {
+    tech: 'ShellScript',
+    href: 'https://github.com/carlos3g/my-linux-workspace',
+    title: 'my-linux-workspace',
+    description:
+      'Configure your recently installed linux distribution with this repo!',
+  },
 ];
 
 function App() {

@@ -67,4 +67,8 @@ export const ProjectsContainer = styled.div`
   flex-direction: column;
   align-items: flex-end;
   width: 60%;
+  overflow: auto;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
