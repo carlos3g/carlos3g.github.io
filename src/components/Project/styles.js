@@ -19,8 +19,8 @@ export const Header = styled.div``;
 export const Tech = styled.h3`
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 10px;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
 `;
 
 export const Body = styled.div`
@@ -29,14 +29,14 @@ export const Body = styled.div`
 
 export const Title = styled.h1`
   font-weight: 600;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 2.4rem;
+  line-height: 3rem;
 `;
 
 export const Description = styled.p`
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
   color: #949495;
   margin-top: 5px;
 `;
@@ -60,8 +60,8 @@ export const StartIcon = styled.img.attrs({
 
 export const StarLabel = styled.span`
   font-weight: 600;
-  line-height: 10px;
-  letter-spacing: 2px;
-  font-size: 10px;
+  line-height: 1rem;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
   color: #949495;
 `;

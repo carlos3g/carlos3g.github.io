@@ -21,14 +21,14 @@ export const Details = styled.div``;
 
 export const Title = styled.h1`
   font-weight: 700;
-  font-size: 58px;
-  line-height: 64px;
+  font-size: 5.8rem;
+  line-height: 6.4rem;
 `;
 
 export const Description = styled.p`
   font-weight: 400;
-  font-size: 14px;
-  line-height: 28px;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
   color: #949495;
   margin-top: 32px;
   width: 408px;

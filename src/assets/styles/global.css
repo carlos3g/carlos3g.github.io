@@ -3,6 +3,8 @@
   --color-text: #f8f8f2;
   --color-green: #50fa7b;
   --color-black: #141414;
+
+  font-size: 62.5%;
 }
 
 * {
@@ -29,7 +31,7 @@ body,
 input,
 button,
 textarea {
-  font: 400 16px;
+  font: 400 1.6rem;
   font-family: 'Gothic A1', sans-serif;
   color: var(--color-text);
 }
