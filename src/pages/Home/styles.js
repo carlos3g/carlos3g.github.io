@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import linkedinSVG from '../../assets/icons/linkedin.svg';
+import githubSVG from '../../assets/icons/github.svg';
+import gmailSVG from '../../assets/icons/gmail.svg';
+
 export const Wrapper = styled.div`
   flex: 1;
   display: flex;
@@ -7,8 +11,13 @@ export const Wrapper = styled.div`
 `;
 
 export const AboutMeContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   width: 40%;
 `;
+
+export const Details = styled.div``;
 
 export const Title = styled.h1`
   font-weight: 700;
@@ -24,6 +33,34 @@ export const Description = styled.p`
   margin-top: 32px;
   width: 408px;
 `;
+
+export const SocialContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  * {
+    margin-right: 38px;
+  }
+`;
+
+export const IconContainer = styled.a.attrs({
+  target: '_blank',
+})``;
+
+export const LinkedinIcon = styled.img.attrs({
+  src: linkedinSVG,
+  width: 20,
+})``;
+
+export const GithubIcon = styled.img.attrs({
+  src: githubSVG,
+  width: 20,
+})``;
+
+export const GmailIcon = styled.img.attrs({
+  src: gmailSVG,
+  width: 20,
+})``;
 
 export const ProjectsContainer = styled.div`
   display: flex;

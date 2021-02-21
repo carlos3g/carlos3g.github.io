@@ -8,6 +8,12 @@ import {
   Title,
   Description,
   ProjectsContainer,
+  SocialContainer,
+  IconContainer,
+  LinkedinIcon,
+  GithubIcon,
+  GmailIcon,
+  Details,
 } from './styles';
 
 const projects = [
@@ -30,16 +36,32 @@ function App() {
   return (
     <Wrapper>
       <AboutMeContainer>
-        <Title>
-          Hello, I’m
-          <br />
-          Carlos Mesquita.
-        </Title>
-        <Description>
-          Eu sou o Carlos, um jovem apaixonado por aprender coisas novas,
-          tecnologia, programação e algoritmos! atualmente eu sou um estudante
-          no Instituto Federal do Piauí.
-        </Description>
+        <Details>
+          <Title>
+            Hello, I’m
+            <br />
+            Carlos Mesquita.
+          </Title>
+          <Description>
+            Eu sou o Carlos, um jovem apaixonado por aprender coisas novas,
+            tecnologia, programação e algoritmos! atualmente eu sou um estudante
+            no Instituto Federal do Piauí.
+          </Description>
+        </Details>
+
+        <SocialContainer>
+          <IconContainer href="https://linkedin.com/in/carlos3g">
+            <LinkedinIcon />
+          </IconContainer>
+
+          <IconContainer href="https://github.com/carlos3g">
+            <GithubIcon />
+          </IconContainer>
+
+          <IconContainer href="mailto:carlosmesquita156@gmail.com">
+            <GmailIcon />
+          </IconContainer>
+        </SocialContainer>
       </AboutMeContainer>
 
       <ProjectsContainer>
