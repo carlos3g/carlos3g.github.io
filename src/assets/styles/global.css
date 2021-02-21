@@ -1,6 +1,8 @@
 :root {
   --color-background: #141414;
   --color-text: #f8f8f2;
+  --color-green: #50fa7b;
+  --color-black: #141414;
 }
 
 * {
@@ -30,4 +32,14 @@ textarea {
   font: 400 16px;
   font-family: 'Gothic A1', sans-serif;
   color: var(--color-text);
+}
+
+::-moz-selection {
+  color: var(--color-black);
+  background: var(--color-green);
+}
+
+::selection {
+  color: var(--color-black);
+  background: var(--color-green);
 }
