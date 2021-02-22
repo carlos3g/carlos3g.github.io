@@ -7,7 +7,7 @@ import gmailSVG from '../../assets/icons/gmail.svg';
 export const Wrapper = styled.div`
   flex: 1;
   display: flex;
-  padding: 88px;
+  padding: 14vh;
 `;
 
 export const AboutMeContainer = styled.div`
@@ -31,7 +31,7 @@ export const Description = styled.p`
   line-height: 2.8rem;
   color: #949495;
   margin-top: 32px;
-  width: 408px;
+  width: 29.5vw;
 `;
 
 export const SocialContainer = styled.div`

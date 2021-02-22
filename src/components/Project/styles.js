@@ -10,8 +10,8 @@ export const Container = styled.a.attrs({
   text-decoration: none;
   margin-bottom: 8px;
   padding: 40px;
-  width: 648px;
-  height: 194px;
+  width: 47.5vw;
+  height: 35vh;
 `;
 
 export const Header = styled.div``;
