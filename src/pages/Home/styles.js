@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import devices from '../../assets/styles/breakpoints';
+
 import linkedinSVG from '../../assets/icons/linkedin.svg';
 import githubSVG from '../../assets/icons/github.svg';
 import gmailSVG from '../../assets/icons/gmail.svg';
@@ -8,6 +10,11 @@ export const Wrapper = styled.div`
   flex: 1;
   display: flex;
   padding: 14vh;
+
+  @media ${devices.mobileL} {
+    flex-direction: column;
+    padding: 5vh;
+  }
 `;
 
 export const AboutMeContainer = styled.div`
@@ -15,6 +22,11 @@ export const AboutMeContainer = styled.div`
   justify-content: space-between;
   flex-direction: column;
   width: 40%;
+
+  @media ${devices.mobileL} {
+    width: auto;
+    margin-bottom: 40px;
+  }
 `;
 
 export const Details = styled.div``;
@@ -32,6 +44,10 @@ export const Description = styled.p`
   color: #949495;
   margin-top: 32px;
   width: 29.5vw;
+
+  @media ${devices.mobileL} {
+    width: auto;
+  }
 `;
 
 export const SocialContainer = styled.div`
@@ -40,6 +56,11 @@ export const SocialContainer = styled.div`
   align-items: center;
   * {
     margin-right: 38px;
+  }
+
+  @media ${devices.mobileL} {
+    justify-content: center;
+    margin-top: 20px;
   }
 `;
 
@@ -70,5 +91,11 @@ export const ProjectsContainer = styled.div`
   overflow: auto;
   ::-webkit-scrollbar {
     display: none;
+  }
+
+  @media ${devices.mobileL} {
+    width: auto;
+    align-items: center;
+    overflow: visible;
   }
 `;

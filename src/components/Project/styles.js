@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import devices from '../../assets/styles/breakpoints';
+
 import starSVG from '../../assets/icons/star.svg';
 
 export const Container = styled.a.attrs({
@@ -12,6 +14,12 @@ export const Container = styled.a.attrs({
   padding: 40px;
   width: 47.5vw;
   height: 35vh;
+
+  @media ${devices.mobileL} {
+    width: 100%;
+    height: auto;
+    padding: 28px;
+  }
 `;
 
 export const Header = styled.div``;

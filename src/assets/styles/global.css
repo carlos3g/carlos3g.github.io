@@ -13,6 +13,15 @@
   box-sizing: border-box;
 }
 
+* > :first-child {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+* > :last-child {
+  margin-bottom: 0 !important;
+  margin-right: 0 !important;
+}
+
 html,
 body,
 #root {
@@ -44,4 +53,10 @@ textarea {
 ::selection {
   color: var(--color-black);
   background: var(--color-green);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 50%;
+  }
 }
