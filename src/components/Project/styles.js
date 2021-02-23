@@ -14,6 +14,12 @@ export const Container = styled.a.attrs({
   padding: 40px;
   width: 47.5vw;
   height: 35vh;
+  border: 1px solid rgba(0,0,0,0);
+  transition: border-color 1s 0.1s;
+
+  :hover {
+    border-color: var(--color-text);
+  }
 
   @media ${devices.mobileL} {
     width: 100%;
