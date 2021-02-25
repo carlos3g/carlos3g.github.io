@@ -1,10 +1,10 @@
 import React from 'react';
 import './assets/styles/global.css';
 
-import HomePage from './pages/Home';
+import Routes from './routes.js';
 
 function App() {
-  return <HomePage />;
+  return <Routes />;
 }
 
 export default App;
