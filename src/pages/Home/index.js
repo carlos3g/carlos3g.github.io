@@ -25,6 +25,12 @@ const projects = [
       'expo-basic is a expo template with basic configs and packages already configured.',
   },
   {
+    tech: 'Typescript',
+    href: 'https://github.com/carlos3g/proffy',
+    title: 'proffy',
+    description: 'Class marketplace developed during NLW#2 | @Rocketseat',
+  },
+  {
     tech: 'Unity',
     href: 'https://github.com/carlos3g/bugs-evolution',
     title: 'bugs-evolution',
