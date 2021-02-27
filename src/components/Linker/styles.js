@@ -1,5 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
+import devices from '../../assets/styles/breakpoints';
+
 const continousGradient = keyframes`
   0% {
     background-position: 0 50%;
@@ -16,7 +18,7 @@ export const LinkerContainer = styled.div`
   margin-bottom: 1rem;
   padding: 0.2rem;
 
-  width: 38vw;
+  width: 50vw;
   height: 12vh;
   border-radius: 3px;
   background: linear-gradient(45deg, #4000ff, #bf00ff, #ff00c0);
@@ -25,6 +27,10 @@ export const LinkerContainer = styled.div`
 
   &:hover {
     animation: ${continousGradient} 2s infinite linear;
+  }
+
+  @media ${devices.mobileL} {
+    width: 80vw;
   }
 `;
 
