@@ -9,16 +9,30 @@ import {
   StarLabel,
   StarsContainer,
   StartIcon,
+  TechsContainer,
   Tech,
   Title,
 } from './styles';
 
 function Project({ projectInfo }) {
-  const { tech, href, title, description } = projectInfo;
+  const { techs, href, title, description } = projectInfo;
+
+  function techsArrayToString(techs) {
+    let str = '';
+
+    techs.forEach((tech, index, array) => {
+      str += index === array.length - 1 ? tech : `${tech} • `;
+    });
+
+    return str;
+  }
+
   return (
     <Container href={href}>
       <Header>
-        <Tech>{tech}</Tech>
+        <TechsContainer>
+          <Tech>{techsArrayToString(techs)}</Tech>
+        </TechsContainer>
       </Header>
 
       <Body>

@@ -18,44 +18,44 @@ import {
 
 const projects = [
   {
-    tech: 'Javascript',
+    techs: ['Javascript', 'Expo'],
     href: 'https://github.com/carlos3g/expo-bmi-calc',
     title: 'expo-bmi-calc',
     description: 'A BMI calculator made with React Native & Expo',
   },
   {
-    tech: 'Javascript',
+    techs: ['Javascript', 'HTML', 'CSS'],
     href: 'https://github.com/carlos3g/boxy',
     title: 'boxy',
     description: 'A border-radius generator',
   },
   {
-    tech: 'Javascript',
+    techs: ['Javascript', 'HTML', 'CSS'],
     href: 'https://github.com/carlos3g/getkcal',
     title: 'getkcal',
     description: 'A useful calorie calculator',
   },
   {
-    tech: 'Javascript',
+    techs: ['Javascript', 'Expo'],
     href: 'https://github.com/carlos3g/expo-basic',
     title: 'expo-basic',
     description:
       'expo-basic is a expo template with basic configs and packages already configured.',
   },
   {
-    tech: 'Typescript',
+    techs: ['Typescript', 'ReactJS', 'Express', 'Expo'],
     href: 'https://github.com/carlos3g/proffy',
     title: 'proffy',
     description: 'Class marketplace developed during NLW#2 | @Rocketseat',
   },
   {
-    tech: 'Unity',
+    techs: ['Unity'],
     href: 'https://github.com/carlos3g/bugs-evolution',
     title: 'bugs-evolution',
     description: 'Simple game created to teach the theory of evolution',
   },
   {
-    tech: 'ShellScript',
+    techs: ['ShellScript'],
     href: 'https://github.com/carlos3g/my-linux-workspace',
     title: 'my-linux-workspace',
     description:

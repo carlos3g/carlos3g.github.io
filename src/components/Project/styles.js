@@ -14,7 +14,7 @@ export const Container = styled.a.attrs({
   padding: 40px;
   width: 47.5vw;
   height: 35vh;
-  border: 1px solid rgba(0,0,0,0);
+  border: 1px solid rgba(0, 0, 0, 0);
   transition: border-color 1s 0.1s;
 
   :hover {
@@ -29,6 +29,11 @@ export const Container = styled.a.attrs({
 `;
 
 export const Header = styled.div``;
+
+export const TechsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 export const Tech = styled.h3`
   font-weight: 700;
