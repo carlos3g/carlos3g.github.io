@@ -19,6 +19,24 @@ import {
 const projects = [
   {
     tech: 'Javascript',
+    href: 'https://github.com/carlos3g/expo-bmi-calc',
+    title: 'expo-bmi-calc',
+    description: 'A BMI calculator made with React Native & Expo',
+  },
+  {
+    tech: 'Javascript',
+    href: 'https://github.com/carlos3g/boxy',
+    title: 'boxy',
+    description: 'A border-radius generator',
+  },
+  {
+    tech: 'Javascript',
+    href: 'https://github.com/carlos3g/getkcal',
+    title: 'getkcal',
+    description: 'A useful calorie calculator',
+  },
+  {
+    tech: 'Javascript',
     href: 'https://github.com/carlos3g/expo-basic',
     title: 'expo-basic',
     description:
