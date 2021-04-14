@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import devices from '../../assets/styles/breakpoints';
+import devices from '../../styles/breakpoints';
 
 import linkedinSVG from '../../assets/icons/linkedin.svg';
 import githubSVG from '../../assets/icons/github.svg';

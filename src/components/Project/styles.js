@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import devices from '../../assets/styles/breakpoints';
+import devices from '../../styles/breakpoints';
 
 import starSVG from '../../assets/icons/star.svg';
 

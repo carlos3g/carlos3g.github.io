@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-import devices from '../../assets/styles/breakpoints';
+import devices from '../../styles/breakpoints';
 
 const continousGradient = keyframes`
   0% {

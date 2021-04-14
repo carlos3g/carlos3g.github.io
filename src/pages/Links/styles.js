@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import devices from '../../assets/styles/breakpoints';
+import devices from '../../styles/breakpoints';
 
 export const Wrapper = styled.div`
   flex: 1;
