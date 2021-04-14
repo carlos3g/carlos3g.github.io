@@ -27,9 +27,6 @@ body,
 #root {
   height: 100vh;
   scroll-behavior: smooth;
-}
-
-body {
   background-color: var(--color-background);
 }
 
