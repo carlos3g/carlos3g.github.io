@@ -56,13 +56,13 @@ textarea {
 
 /* selection */
 ::-moz-selection {
-  color: var(--color-black);
-  background: var(--color-green);
+  color: var(--color-text);
+  background: #4000ff;
 }
 
 ::selection {
-  color: var(--color-black);
-  background: var(--color-green);
+  color: var(--color-text);
+  background: #4000ff;
 }
 
 /* Scrollbar */
