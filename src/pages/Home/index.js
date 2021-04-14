@@ -3,7 +3,7 @@ import React from 'react';
 import Project from '../../components/Project';
 
 import {
-  Wrapper,
+  Container,
   AboutMeContainer,
   Title,
   Description,
@@ -65,7 +65,7 @@ const projects = [
 
 function App() {
   return (
-    <Wrapper>
+    <Container>
       <AboutMeContainer>
         <Details>
           <Title>
@@ -100,7 +100,7 @@ function App() {
           <Project projectInfo={project} key={index} />
         ))}
       </ProjectsContainer>
-    </Wrapper>
+    </Container>
   );
 }
 

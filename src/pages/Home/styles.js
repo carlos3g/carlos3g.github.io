@@ -6,7 +6,7 @@ import linkedinSVG from '../../assets/icons/linkedin.svg';
 import githubSVG from '../../assets/icons/github.svg';
 import gmailSVG from '../../assets/icons/gmail.svg';
 
-export const Wrapper = styled.div`
+export const Container = styled.div`
   flex: 1;
   display: flex;
   padding: 14vh;
