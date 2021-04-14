@@ -57,6 +57,7 @@ textarea {
   height: 2px;
 }
 
+/* selection */
 ::-moz-selection {
   color: var(--color-black);
   background: var(--color-green);
@@ -67,6 +68,7 @@ textarea {
   background: var(--color-green);
 }
 
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -89,6 +91,7 @@ textarea {
   background-color: var(--color-background);
 }
 
+/* Media queries */
 @media (max-width: 1024px) {
   :root {
     font-size: 50%;
