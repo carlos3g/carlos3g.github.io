@@ -6,7 +6,6 @@ import {
   Container,
   AboutMeContainer,
   Title,
-  TopLine,
   Description,
   ProjectsContainer,
   SocialContainer,
@@ -67,7 +66,6 @@ const projects = [
 function App() {
   return (
     <Container>
-      <TopLine />
       <AboutMeContainer>
         <Details>
           <Title>

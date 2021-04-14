@@ -17,17 +17,6 @@ export const Container = styled.div`
   }
 `;
 
-export const TopLine = styled.div`
-  background: linear-gradient(45deg, #4000ff, #bf00ff, #ff00c0);
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100vw;
-  height: 2px;
-`;
-
 export const AboutMeContainer = styled.div`
   display: flex;
   justify-content: space-between;
