@@ -2,24 +2,18 @@ import styled from 'styled-components';
 
 import devices from '../../styles/breakpoints';
 
-export const Wrapper = styled.div`
+export const Container = styled.div`
   flex: 1;
-  width: 100vw;
-  height: 100vh;
   display: flex;
+  align-items: center;
+  flex-direction: column;
+
   padding: 14vh;
 
   @media ${devices.mobileL} {
     flex-direction: column;
     padding: 5vh;
   }
-`;
-
-export const Container = styled.main`
-  flex: 1;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 `;
 
 export const LinkersContainer = styled.div`

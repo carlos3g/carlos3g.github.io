@@ -20,6 +20,7 @@ export const LinkerContainer = styled.div`
 
   width: 50vw;
   height: 12vh;
+
   border-radius: 3px;
   background: linear-gradient(45deg, #4000ff, #bf00ff, #ff00c0);
   background-size: 300% 100%;
@@ -46,8 +47,6 @@ export const Linker = styled.a.attrs({
   width: 100%;
   height: 100%;
 
-  color: inherit;
-  text-decoration: none;
   font-weight: 600;
   font-size: 2.4rem;
   line-height: 3rem;

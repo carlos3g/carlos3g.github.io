@@ -8,16 +8,16 @@ export const Container = styled.a.attrs({
   target: '_blank',
 })`
   background-color: #202022;
-  color: var(--color-text);
-  text-decoration: none;
   margin-bottom: 8px;
   padding: 40px;
+
   width: 47.5vw;
   height: 35vh;
-  border: 1px solid rgba(0, 0, 0, 0);
+
+  border: 1px solid transparent;
   transition: border-color 1s 0.1s;
 
-  :hover {
+  &:hover {
     border-color: var(--color-text);
   }
 

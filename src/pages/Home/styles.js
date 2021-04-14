@@ -9,6 +9,7 @@ import gmailSVG from '../../assets/icons/gmail.svg';
 export const Container = styled.div`
   flex: 1;
   display: flex;
+
   padding: 14vh;
 
   @media ${devices.mobileL} {
@@ -21,6 +22,7 @@ export const AboutMeContainer = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+
   width: 40%;
 
   @media ${devices.mobileL} {
@@ -38,10 +40,10 @@ export const Title = styled.h1`
 `;
 
 export const Description = styled.p`
-  font-weight: 400;
   font-size: 1.4rem;
   line-height: 2.8rem;
   color: #949495;
+
   margin-top: 32px;
   width: 29.5vw;
 
@@ -54,7 +56,8 @@ export const SocialContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  * {
+
+  & > * {
     margin-right: 38px;
   }
 
@@ -87,6 +90,7 @@ export const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
   width: 60%;
   overflow: auto;
   ::-webkit-scrollbar {

@@ -3,7 +3,7 @@ import React from 'react';
 import Profile from '../../components/Profile';
 import Linker from '../../components/Linker';
 
-import { Wrapper, Container, LinkersContainer } from './styles';
+import { Container, LinkersContainer } from './styles';
 
 const user = {
   name: 'Carlos Mesquita',
@@ -22,17 +22,15 @@ const items = [
 
 function Links() {
   return (
-    <Wrapper>
-      <Container>
-        <Profile user={user} />
+    <Container>
+      <Profile user={user} />
 
-        <LinkersContainer>
-          {items.map((item) => (
-            <Linker data={item} />
-          ))}
-        </LinkersContainer>
-      </Container>
-    </Wrapper>
+      <LinkersContainer>
+        {items.map((item) => (
+          <Linker data={item} />
+        ))}
+      </LinkersContainer>
+    </Container>
   );
 }
 

@@ -18,10 +18,10 @@ export const Details = styled.div`
 
 export const Name = styled.h1`
   font-weight: 700;
+  font-size: 2rem;
 `;
 
 export const Description = styled.p`
-  font-weight: 400;
   font-size: 1.4rem;
   line-height: 2.8rem;
   color: #949495;
