@@ -26,8 +26,8 @@ function Links() {
       <Profile user={user} />
 
       <LinkersContainer>
-        {items.map((item) => (
-          <Linker data={item} />
+        {items.map((item, index) => (
+          <Linker data={item} key={index} />
         ))}
       </LinkersContainer>
     </Container>
