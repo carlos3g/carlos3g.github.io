@@ -8,11 +8,10 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
 
-  padding: 14vh;
+  padding: 10vh 0;
 
   @media ${devices.mobileL} {
     flex-direction: column;
-    padding: 5vh;
   }
 `;
 
@@ -23,6 +22,6 @@ export const LinkersContainer = styled.div`
   flex-direction: column;
 
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 8vh;
   padding-bottom: 4rem;
 `;
