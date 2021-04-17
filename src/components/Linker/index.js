@@ -1,11 +1,14 @@
 import React from 'react';
 
-import { Linker, LinkerContainer } from './styles';
+import { Linker, LinkerContainer, LinkIcon } from './styles';
 
 function Links({ data }) {
   return (
     <LinkerContainer>
-      <Linker href={data.url}>{data.title}</Linker>
+      <Linker href={data.url}>
+        {data.title}
+        <LinkIcon />
+      </Linker>
     </LinkerContainer>
   );
 }

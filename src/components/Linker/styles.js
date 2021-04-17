@@ -1,33 +1,44 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 import devices from '../../styles/breakpoints';
 
-const continousGradient = keyframes`
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 50% 100%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
-`;
+import externalLinkIMG from '../../assets/icons/external-link.svg';
 
 export const LinkerContainer = styled.div`
-  margin-bottom: 1rem;
-  padding: 0.2rem;
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  padding: 1px 1px 1px 8px;
+  cursor: pointer;
 
   width: 50vw;
-  height: 12vh;
+  height: 7rem;
 
-  border-radius: 3px;
-  background: linear-gradient(45deg, #4000ff, #bf00ff, #ff00c0);
-  background-size: 300% 100%;
-  animation: none;
+  border-radius: 8px;
 
-  &:hover {
-    animation: ${continousGradient} 2s infinite linear;
+  z-index: 1;
+
+  background: linear-gradient(180deg, #4000ff, #bf00ff);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(360deg, #4000ff, #bf00ff);
+    border-radius: inherit;
+
+    opacity: 0;
+    transition: opacity 0.8s;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    opacity: 1;
   }
 
   @media ${devices.mobileL} {
@@ -42,14 +53,22 @@ export const Linker = styled.a.attrs({
   align-items: center;
   justify-content: center;
 
-  padding: 2rem;
-  border-radius: 3px;
+  border-radius: 8px;
   width: 100%;
   height: 100%;
 
-  font-weight: 600;
   font-size: 2.4rem;
-  line-height: 3rem;
 
   background-color: #202022;
+`;
+
+export const LinkIcon = styled.img.attrs({
+  src: externalLinkIMG,
+  align: 'right',
+})`
+  width: 22px;
+  height: 22px;
+
+  position: absolute;
+  right: 2rem;
 `;
