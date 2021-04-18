@@ -18,7 +18,7 @@ export const LinkerContainer = styled.div`
 
   z-index: 1;
 
-  background: linear-gradient(180deg, #4000ff, #bf00ff);
+  background: linear-gradient(180deg, #4d19e6, #b219e6);
 
   &::before {
     content: '';
@@ -29,11 +29,11 @@ export const LinkerContainer = styled.div`
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(360deg, #4000ff, #bf00ff);
+    background: linear-gradient(45deg, #4d19e6, #b219e6);
     border-radius: inherit;
 
     opacity: 0;
-    transition: opacity 0.8s;
+    transition: opacity 1s;
     z-index: -1;
   }
 
