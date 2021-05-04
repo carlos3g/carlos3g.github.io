@@ -16,7 +16,6 @@ const items = [
   { title: 'Instagram', url: 'https://www.instagram.com/c4rlos3g' },
   { title: 'Twitter', url: 'https://twitter.com/c4rlos3g' },
   { title: 'Linkedin', url: 'https://www.linkedin.com/in/carlos3g' },
-  { title: 'Discord', url: 'https://discord.com/channels/@me/carlos3g#0956' },
   { title: 'Telegram', url: 'https://t.me/c4rlos3g' },
 ];
 
