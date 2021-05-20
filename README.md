@@ -26,10 +26,9 @@ carlos3g.github.io - É o portfólio de [Carlos Mesquita](https://www.linkedin.c
 
 ## 📷 Screenshots
 
-<!--
-<img src="" alt="" />
-<img src="" alt="" />
--->
+<div align="center">
+  <img src=".github/images/screenshots.png" alt="Screenshot" width="90%"/>
+</div>
 
 ## 🛠 Tecnologias
 
