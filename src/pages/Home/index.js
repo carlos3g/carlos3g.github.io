@@ -24,6 +24,19 @@ const projects = [
     description: 'A BMI calculator made with React Native & Expo',
   },
   {
+    techs: ['Javascript', 'Expo'],
+    href: 'https://github.com/carlos3g/expo-basic',
+    title: 'expo-basic',
+    description:
+      'A expo template with basic configs and packages already configured.',
+  },
+  {
+    techs: ['Typescript', 'ReactJS', 'Express', 'Expo'],
+    href: 'https://github.com/carlos3g/proffy',
+    title: 'proffy',
+    description: 'Class marketplace system developed during NLW#2 | @Rocketseat',
+  },
+  {
     techs: ['Javascript', 'HTML', 'CSS'],
     href: 'https://github.com/carlos3g/boxy',
     title: 'boxy',
@@ -34,19 +47,6 @@ const projects = [
     href: 'https://github.com/carlos3g/getkcal',
     title: 'getkcal',
     description: 'A useful calorie calculator',
-  },
-  {
-    techs: ['Javascript', 'Expo'],
-    href: 'https://github.com/carlos3g/expo-basic',
-    title: 'expo-basic',
-    description:
-      'expo-basic is a expo template with basic configs and packages already configured.',
-  },
-  {
-    techs: ['Typescript', 'ReactJS', 'Express', 'Expo'],
-    href: 'https://github.com/carlos3g/proffy',
-    title: 'proffy',
-    description: 'Class marketplace developed during NLW#2 | @Rocketseat',
   },
   {
     techs: ['Unity'],
