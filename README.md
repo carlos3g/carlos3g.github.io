@@ -12,45 +12,70 @@
   </div>
 </div>
     
-## Tabela de conteúdos
+## Table of contents
 
-- [Sobre o projeto](#-sobre-o-projeto)
-- [Screenshots](#-screenshots)
-- [Tecnologias](#-tecnologias)
-- [Como contribuir no projeto](#-como-contribuir-no-projeto)
-- [Licença](#-licença)
+- [About the project](#-about-the-project)
+  - [Screenshots](#-screenshots)
+  - [Technologies](#-technologies)
+  - [How to run](#-how-to-run)
+- [How to contribute](#-how-to-contribute)
+- [License](#-license)
 
-## 💻 Sobre o projeto
+## 💻 About the project
 
-carlos3g.github.io - É o portfólio de [Carlos Mesquita](https://www.linkedin.com/in/carlos3g).
+Portfolio made by me to show some of my projects and useful information to employers
 
-## 📷 Screenshots
+### 📷 Screenshots
 
 <div align="center">
   <img src=".github/images/screenshots.png" alt="Screenshot" width="90%"/>
 </div>
 
-## 🛠 Tecnologias
+### 🛠 Technologies
 
-As seguintes ferramentas foram usadas na construção do projeto:
+The following technologies were used in the construction of the project:
 
 - [React](https://pt-br.reactjs.org)
 - [Github Pages](https://pages.github.com)
 
-## 🤝 Como contribuir no projeto
+### 🚀 How to run
 
-Todo tipo de contribuição é bem-vinda, nós admiramos isso!
+1. Clone the repository
 
-Tem algum problema? Encontrou um bug? Tem alguma dica? Abra uma [issue](https://github.com/carlos3g/carlos3g.github.io/issues) descrevendo.
+   ```bash
+   git clone https://github.com/carlos3g/carlos3g.github.io.git
+   ```
 
-Quer contribuir com código? Pedimos que antes leia [este guia de contribuição](https://github.com/firstcontributions/first-contributions)
+2. Install the dependencies
 
-Não esqueça de deixar a sua ⭐, também é um modo de contribuir com o projeto ;)
+   ```bash
+   cd carlos3g.github.io
+   yarn install
+   ```
 
-## 📝 Licença
+3. Run the application
+   ```bash
+   yarn start
+   ```
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+## 🤝 How to contribute
+
+Every kind of contribution is welcome, we admire it!
+
+Is there any problem? Found a bug? Do you have any tips? Open an [issue](https://github.com/carlos3g/carlos3g.github.io/issues) describing it.
+
+Want to contribute code? We ask that you first read [this contribution guide](https://github.com/firstcontributions/first-contributions)
+
+Don't forget to leave your ⭐, it is also a way to contribute to the project;)
+
+## 📝 License
+
+This project is under the MIT license. See the file [LICENSE](LICENSE) for more details.
 
 ---
 
-Criado por [Carlos Mesquita](https://github.com/carlos3g) 💜
+<div align="center">
+
+Created by [Carlos Mesquita](https://github.com/carlos3g) 💜
+
+</div>
