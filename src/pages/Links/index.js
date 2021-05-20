@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Profile from '../../components/Profile';
-import Linker from '../../components/Linker';
+import { Profile, Linker } from '../../components';
 
 import { Container, LinkersContainer } from './styles';
 
