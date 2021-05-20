@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { Project } from '../../components';
 
@@ -63,7 +64,25 @@ const projects = [
   },
 ];
 
+const socialMedias = [
+  { url: 'https://linkedin.com/in/carlos3g', icon: <LinkedinIcon /> },
+  { url: 'https://github.com/carlos3g', icon: <GithubIcon /> },
+  { url: 'mailto:carlosmesquita156@gmail.com', icon: <GmailIcon /> },
+];
+
 function App() {
+  const renderProjects = () =>
+    projects.map((project, index) => (
+      <Project projectInfo={project} key={index} />
+    ));
+
+  const renderSocialMedias = () =>
+    socialMedias.map((socialMedia, index) => (
+      <IconContainer href={socialMedia.url} key={index}>
+        {socialMedia.icon}
+      </IconContainer>
+    ));
+
   return (
     <Container>
       <AboutMeContainer>
@@ -80,26 +99,10 @@ function App() {
           </Description>
         </Details>
 
-        <SocialContainer>
-          <IconContainer href="https://linkedin.com/in/carlos3g">
-            <LinkedinIcon />
-          </IconContainer>
-
-          <IconContainer href="https://github.com/carlos3g">
-            <GithubIcon />
-          </IconContainer>
-
-          <IconContainer href="mailto:carlosmesquita156@gmail.com">
-            <GmailIcon />
-          </IconContainer>
-        </SocialContainer>
+        <SocialContainer>{renderSocialMedias()}</SocialContainer>
       </AboutMeContainer>
 
-      <ProjectsContainer>
-        {projects.map((project, index) => (
-          <Project projectInfo={project} key={index} />
-        ))}
-      </ProjectsContainer>
+      <ProjectsContainer>{renderProjects()}</ProjectsContainer>
     </Container>
   );
 }
