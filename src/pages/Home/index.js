@@ -70,7 +70,7 @@ const socialMedias = [
   { url: 'mailto:carlosmesquita156@gmail.com', icon: <GmailIcon /> },
 ];
 
-function App() {
+function Home() {
   const renderProjects = () =>
     projects.map((project, index) => (
       <Project projectInfo={project} key={index} />
@@ -107,4 +107,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

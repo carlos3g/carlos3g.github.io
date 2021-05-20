@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Wrapper, Title } from './styles';
 
-function App() {
+function NotFound() {
   return (
     <Wrapper>
       <Title>Error 404</Title>
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default NotFound;
