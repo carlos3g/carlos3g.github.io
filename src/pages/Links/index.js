@@ -16,18 +16,19 @@ const items = [
   { title: 'Twitter', url: 'https://twitter.com/c4rlos3g' },
   { title: 'Linkedin', url: 'https://www.linkedin.com/in/carlos3g' },
   { title: 'Telegram', url: 'https://t.me/c4rlos3g' },
+  { title: 'Codepen', url: 'https://codepen.io/carlos3g' },
+  { title: 'Medium', url: '	https://medium.com/@carlos3g' },
 ];
 
 function Links() {
+  const renderLinkers = () =>
+    items.map((item, index) => <Linker data={item} key={index} />);
+
   return (
     <Container>
       <Profile user={user} />
 
-      <LinkersContainer>
-        {items.map((item, index) => (
-          <Linker data={item} key={index} />
-        ))}
-      </LinkersContainer>
+      <LinkersContainer>{renderLinkers()}</LinkersContainer>
     </Container>
   );
 }
