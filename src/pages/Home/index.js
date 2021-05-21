@@ -19,6 +19,12 @@ import {
 const projects = [
   {
     techs: ['Javascript', 'Expo'],
+    href: 'https://github.com/carlos3g/expo-anime-finder',
+    title: 'Anime Finder',
+    description: 'Find an anime through an image',
+  },
+  {
+    techs: ['Javascript', 'Expo'],
     href: 'https://github.com/carlos3g/expo-bmi-calc',
     title: 'expo-bmi-calc',
     description: 'A BMI calculator made with React Native & Expo',
@@ -34,7 +40,8 @@ const projects = [
     techs: ['Typescript', 'ReactJS', 'Express', 'Expo'],
     href: 'https://github.com/carlos3g/proffy',
     title: 'proffy',
-    description: 'Class marketplace system developed during NLW#2 | @Rocketseat',
+    description:
+      'Class marketplace system developed during NLW#2 | @Rocketseat',
   },
   {
     techs: ['Javascript', 'HTML', 'CSS'],
