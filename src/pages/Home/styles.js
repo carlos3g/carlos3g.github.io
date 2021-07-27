@@ -1,9 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import devices from '../../styles/breakpoints';
 import linkedinSVG from '../../assets/icons/linkedin.svg';
 import githubSVG from '../../assets/icons/github.svg';
 import gmailSVG from '../../assets/icons/gmail.svg';
+
+const spinAnimation = keyframes`
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+`;
 
 export const Container = styled.div`
   flex: 1;
@@ -66,7 +72,7 @@ export const SocialMedias = styled.div`
   }
 `;
 
-export const IconContainer = styled.a.attrs({
+export const IconWrapper = styled.a.attrs({
   target: '_blank',
 })``;
 
@@ -88,9 +94,11 @@ export const GmailIcon = styled.img.attrs({
 export const Projects = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: ${({ loading }) => (loading ? 'center' : 'flex-end')};
+  justify-content: ${({ loading }) => (loading ? 'center' : 'default')};
 
   width: 60%;
+  height: 100%;
   overflow: auto;
   ::-webkit-scrollbar {
     display: none;
@@ -101,4 +109,15 @@ export const Projects = styled.div`
     align-items: center;
     overflow: visible;
   }
+`;
+
+export const Loader = styled.div`
+  width: 5rem;
+  height: 5rem;
+
+  border-radius: 50%;
+  border: 0.8rem solid rgba(255, 255, 255, 0.08);
+  border-top: 0.8rem solid #4d19e6;
+
+  animation: ${spinAnimation} 2s infinite linear;
 `;

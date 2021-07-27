@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+
+import axios from '../../services/api';
 
 import { Project } from '../../components';
 import {
@@ -8,65 +10,23 @@ import {
   Description,
   Projects,
   SocialMedias,
-  IconContainer,
+  IconWrapper,
   LinkedinIcon,
   GithubIcon,
   GmailIcon,
   Details,
+  Loader,
 } from './styles';
 
-const projects = [
-  {
-    techs: ['Javascript', 'Expo'],
-    href: 'https://github.com/carlos3g/expo-anime-finder',
-    title: 'Anime Finder',
-    description: 'Find an anime through an image',
-  },
-  {
-    techs: ['Javascript', 'Expo'],
-    href: 'https://github.com/carlos3g/expo-bmi-calc',
-    title: 'expo-bmi-calc',
-    description: 'A BMI calculator made with React Native & Expo',
-  },
-  {
-    techs: ['Javascript', 'Expo'],
-    href: 'https://github.com/carlos3g/expo-basic',
-    title: 'expo-basic',
-    description:
-      'A expo template with basic configs and packages already configured.',
-  },
-  {
-    techs: ['Typescript', 'ReactJS', 'Express', 'Expo'],
-    href: 'https://github.com/carlos3g/proffy',
-    title: 'proffy',
-    description:
-      'Class marketplace system developed during NLW#2 | @Rocketseat',
-  },
-  {
-    techs: ['Javascript', 'HTML', 'CSS'],
-    href: 'https://github.com/carlos3g/boxy',
-    title: 'boxy',
-    description: 'A border-radius generator',
-  },
-  {
-    techs: ['Javascript', 'HTML', 'CSS'],
-    href: 'https://github.com/carlos3g/getkcal',
-    title: 'getkcal',
-    description: 'A useful calorie calculator',
-  },
-  {
-    techs: ['Unity'],
-    href: 'https://github.com/carlos3g/bugs-evolution',
-    title: 'bugs-evolution',
-    description: 'Simple game created to teach the theory of evolution',
-  },
-  {
-    techs: ['ShellScript'],
-    href: 'https://github.com/carlos3g/my-linux-workspace',
-    title: 'my-linux-workspace',
-    description:
-      'Configure your recently installed linux distribution with this repo!',
-  },
+const projectNames = [
+  'carlos3g/expo-anime-finder',
+  'carlos3g/expo-bmi-calc',
+  'carlos3g/expo-basic',
+  'carlos3g/proffy',
+  'carlos3g/boxy',
+  'carlos3g/getkcal',
+  'carlos3g/bugs-evolution',
+  'carlos3g/my-linux-workspace',
 ];
 
 const socialMedias = [
@@ -76,14 +36,34 @@ const socialMedias = [
 ];
 
 function Home() {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      let projects = [];
+
+      for (const pN of projectNames) {
+        const project = (await axios.get(`/repos/${pN}`)).data;
+        const techs = Object.keys(
+          (await axios.get(`/repos/${pN}/languages`)).data
+        );
+        projects.push({ ...project, techs });
+      }
+
+      setProjects(projects);
+      setLoading(false);
+    })();
+  }, []);
+
   const renderProjects = () =>
     projects.map((p, i) => <Project data={p} key={i} />);
 
   const renderSocialMedias = () =>
     socialMedias.map((s, i) => (
-      <IconContainer href={s.url} key={i}>
+      <IconWrapper href={s.url} key={i}>
         {s.icon}
-      </IconContainer>
+      </IconWrapper>
     ));
 
   return (
@@ -103,7 +83,9 @@ function Home() {
         </Details>
         <SocialMedias>{renderSocialMedias()}</SocialMedias>
       </AboutMe>
-      <Projects>{renderProjects()}</Projects>
+      <Projects loading={loading}>
+        {loading ? <Loader /> : renderProjects()}
+      </Projects>
     </Container>
   );
 }

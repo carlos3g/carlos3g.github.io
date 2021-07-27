@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import {
   Body,
@@ -14,27 +14,26 @@ import {
 } from './styles';
 
 function Project({ data }) {
-  const { techs, href, title, description } = data;
-
+  const { techs, html_url, name, description, stargazers_count } = data;
   return (
-    <Container href={href}>
+    <Container href={html_url}>
       <Header>
         <Techs>{techs.join(' • ')}</Techs>
       </Header>
 
       <Body>
-        <Title>{title}</Title>
+        <Title>{name}</Title>
         <Description>{description}</Description>
       </Body>
 
       <Footer>
         <Stars>
           <StarIcon />
-          <StarsLabel>4,027</StarsLabel>
+          <StarsLabel>{stargazers_count}</StarsLabel>
         </Stars>
       </Footer>
     </Container>
   );
 }
 
-export default Project;
+export default memo(Project);
