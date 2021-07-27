@@ -15,7 +15,7 @@ export const Container = styled.div`
   }
 `;
 
-export const LinkersContainer = styled.div`
+export const Linkers = styled.div`
   flex: 1;
   display: flex;
   align-items: center;

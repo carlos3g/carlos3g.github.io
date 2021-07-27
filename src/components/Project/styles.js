@@ -30,12 +30,7 @@ export const Container = styled.a.attrs({
 
 export const Header = styled.div``;
 
-export const TechsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
-export const Tech = styled.h3`
+export const Techs = styled.h3`
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -64,20 +59,20 @@ export const Footer = styled.div`
   margin-top: 10px;
 `;
 
-export const StarsContainer = styled.div`
+export const Stars = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
 `;
 
-export const StartIcon = styled.img.attrs({
+export const StarIcon = styled.img.attrs({
   src: starSVG,
   width: 12,
 })`
   margin: 0 5px 4px 0;
 `;
 
-export const StarLabel = styled.span`
+export const StarsLabel = styled.span`
   font-weight: 600;
   line-height: 1rem;
   letter-spacing: 0.2rem;

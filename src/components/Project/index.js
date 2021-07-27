@@ -6,33 +6,20 @@ import {
   Description,
   Footer,
   Header,
-  StarLabel,
-  StarsContainer,
-  StartIcon,
-  TechsContainer,
-  Tech,
+  StarsLabel,
+  Stars,
+  StarIcon,
+  Techs,
   Title,
 } from './styles';
 
-function Project({ projectInfo }) {
-  const { techs, href, title, description } = projectInfo;
-
-  function techsArrayToString(techs) {
-    let str = '';
-
-    techs.forEach((tech, index, array) => {
-      str += index === array.length - 1 ? tech : `${tech} • `;
-    });
-
-    return str;
-  }
+function Project({ data }) {
+  const { techs, href, title, description } = data;
 
   return (
     <Container href={href}>
       <Header>
-        <TechsContainer>
-          <Tech>{techsArrayToString(techs)}</Tech>
-        </TechsContainer>
+        <Techs>{techs.join(' • ')}</Techs>
       </Header>
 
       <Body>
@@ -41,10 +28,10 @@ function Project({ projectInfo }) {
       </Body>
 
       <Footer>
-        <StarsContainer>
-          <StartIcon />
-          <StarLabel>4,027</StarLabel>
-        </StarsContainer>
+        <Stars>
+          <StarIcon />
+          <StarsLabel>4,027</StarsLabel>
+        </Stars>
       </Footer>
     </Container>
   );

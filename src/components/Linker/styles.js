@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 import devices from '../../styles/breakpoints';
-
 import externalLinkIMG from '../../assets/icons/external-link.svg';
 
-export const LinkerContainer = styled.div`
+export const Container = styled.div`
   position: relative;
   margin-bottom: 1.5rem;
 
@@ -14,11 +13,10 @@ export const LinkerContainer = styled.div`
   width: 50vw;
   height: 7rem;
 
+  background: linear-gradient(180deg, #4d19e6, #b219e6);
   border-radius: 8px;
 
   z-index: 1;
-
-  background: linear-gradient(180deg, #4d19e6, #b219e6);
 
   &::before {
     content: '';
@@ -46,7 +44,7 @@ export const LinkerContainer = styled.div`
   }
 `;
 
-export const Linker = styled.a.attrs({
+export const Button = styled.a.attrs({
   target: '_blank',
 })`
   display: flex;
@@ -58,7 +56,6 @@ export const Linker = styled.a.attrs({
   height: 100%;
 
   font-size: 2.4rem;
-
   background-color: #202022;
 `;
 

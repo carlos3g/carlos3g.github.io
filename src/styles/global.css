@@ -58,12 +58,12 @@ a {
 /* selection */
 ::-moz-selection {
   color: var(--color-text);
-  background: #4000ff;
+  background: #4d19e6;
 }
 
 ::selection {
   color: var(--color-text);
-  background: #4000ff;
+  background: #4d19e6;
 }
 
 /* Scrollbar */

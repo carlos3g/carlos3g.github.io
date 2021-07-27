@@ -1,14 +1,13 @@
 import React from 'react';
 
 import { Project } from '../../components';
-
 import {
   Container,
-  AboutMeContainer,
+  AboutMe,
   Title,
   Description,
-  ProjectsContainer,
-  SocialContainer,
+  Projects,
+  SocialMedias,
   IconContainer,
   LinkedinIcon,
   GithubIcon,
@@ -78,20 +77,18 @@ const socialMedias = [
 
 function Home() {
   const renderProjects = () =>
-    projects.map((project, index) => (
-      <Project projectInfo={project} key={index} />
-    ));
+    projects.map((p, i) => <Project data={p} key={i} />);
 
   const renderSocialMedias = () =>
-    socialMedias.map((socialMedia, index) => (
-      <IconContainer href={socialMedia.url} key={index}>
-        {socialMedia.icon}
+    socialMedias.map((s, i) => (
+      <IconContainer href={s.url} key={i}>
+        {s.icon}
       </IconContainer>
     ));
 
   return (
     <Container>
-      <AboutMeContainer>
+      <AboutMe>
         <Details>
           <Title>
             Hello, I’m
@@ -104,11 +101,9 @@ function Home() {
             no Instituto Federal do Piauí.
           </Description>
         </Details>
-
-        <SocialContainer>{renderSocialMedias()}</SocialContainer>
-      </AboutMeContainer>
-
-      <ProjectsContainer>{renderProjects()}</ProjectsContainer>
+        <SocialMedias>{renderSocialMedias()}</SocialMedias>
+      </AboutMe>
+      <Projects>{renderProjects()}</Projects>
     </Container>
   );
 }

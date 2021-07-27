@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import devices from '../../styles/breakpoints';
-
 import linkedinSVG from '../../assets/icons/linkedin.svg';
 import githubSVG from '../../assets/icons/github.svg';
 import gmailSVG from '../../assets/icons/gmail.svg';
@@ -18,7 +17,7 @@ export const Container = styled.div`
   }
 `;
 
-export const AboutMeContainer = styled.div`
+export const AboutMe = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -52,7 +51,7 @@ export const Description = styled.p`
   }
 `;
 
-export const SocialContainer = styled.div`
+export const SocialMedias = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -86,7 +85,7 @@ export const GmailIcon = styled.img.attrs({
   width: 20,
 })``;
 
-export const ProjectsContainer = styled.div`
+export const Projects = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
