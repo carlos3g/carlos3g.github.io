@@ -1,8 +1,9 @@
 {
-  "name": "portfolio",
-  "homepage": "http://carlos3g.github.io",
+  "name": "carlos3g.github.io",
+  "homepage": "https://carlos3g.github.io",
   "version": "0.1.0",
   "private": true,
+  "author": "Carlos Mesquita <carlosmesquita156@gmail.com> (https://carlos3g.github.io)",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
