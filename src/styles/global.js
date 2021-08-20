@@ -1,3 +1,6 @@
+import { createGlobalStyle } from 'styled-components';
+
+export default createGlobalStyle`
 :root {
   --color-background: #141414;
   --color-text: #f8f8f2;
@@ -10,21 +13,20 @@
 * {
   margin: 0;
   padding: 0;
-
   font-size: 1.6rem;
   font-family: 'Gothic A1', sans-serif;
   color: var(--color-text);
-
   box-sizing: border-box;
-}
 
-* > :first-child {
+  &:first-child {
   margin-top: 0 !important;
   margin-left: 0 !important;
-}
-* > :last-child {
-  margin-bottom: 0 !important;
-  margin-right: 0 !important;
+  }
+
+  &:last-child {
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+  }
 }
 
 html,
@@ -35,22 +37,15 @@ body,
   background-color: var(--color-background);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 #root {
   display: flex;
 }
 
 #top-line {
   background: linear-gradient(45deg, #4d19e6, #b219e6, #e619b3);
-
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100vw;
   height: 2px;
 }
@@ -89,9 +84,14 @@ a {
   background-color: var(--color-background);
 }
 
-/* Media queries */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 @media (max-width: 1024px) {
   :root {
     font-size: 50%;
   }
 }
+`;

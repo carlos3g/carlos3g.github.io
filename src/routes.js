@@ -1,5 +1,4 @@
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-
 import { Home, Links, NotFound } from './pages';
 
 function Routes() {
