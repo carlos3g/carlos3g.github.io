@@ -19,14 +19,12 @@ import {
 } from './styles';
 
 const projectNames = [
+  'carlos3g/faire',
   'carlos3g/expo-anime-finder',
   'carlos3g/expo-bmi-calc',
-  'carlos3g/expo-basic',
   'carlos3g/proffy',
   'carlos3g/boxy',
   'carlos3g/getkcal',
-  'carlos3g/bugs-evolution',
-  'carlos3g/my-linux-workspace',
 ];
 
 const socialMedias = [
