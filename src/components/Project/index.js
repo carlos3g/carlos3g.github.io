@@ -5,7 +5,6 @@ import {
   Description,
   Footer,
   Header,
-  StarsLabel,
   Stars,
   StarIcon,
   Techs,
@@ -29,7 +28,7 @@ const Project = ({ data }) => {
       <Footer>
         <Stars>
           <StarIcon />
-          <StarsLabel>{stargazers_count}</StarsLabel>
+          {stargazers_count}
         </Stars>
       </Footer>
     </Container>

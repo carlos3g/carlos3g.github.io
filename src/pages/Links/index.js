@@ -17,16 +17,14 @@ const sites = [
   { title: 'Medium', href: '	https://medium.com/@carlos3g' },
 ];
 
-const Links = () => {
-  const renderLinkers = () =>
-    sites.map((s, i) => <Linker href={s.href} title={s.title} key={i} />);
+const renderLinkers = () =>
+  sites.map((s) => <Linker href={s.href} title={s.title} key={s.href} />);
 
-  return (
-    <Container>
-      <Profile user={user} />
-      <Linkers>{renderLinkers()}</Linkers>
-    </Container>
-  );
-};
+const Links = () => (
+  <Container>
+    <Profile user={user} />
+    <Linkers>{renderLinkers()}</Linkers>
+  </Container>
+);
 
 export default Links;

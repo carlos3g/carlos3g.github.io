@@ -1,12 +1,14 @@
-import { Button, Container, LinkIcon } from './styles';
+import { memo } from 'react';
+import { Content, Wrapper, LinkIcon } from './styles';
 
 const Linker = ({ title, href }) => (
-  <Container>
-    <Button href={href}>
+  <Wrapper href={href}>
+    <Content>
+      <div />
       {title}
       <LinkIcon />
-    </Button>
-  </Container>
+    </Content>
+  </Wrapper>
 );
 
-export default Linker;
+export default memo(Linker);

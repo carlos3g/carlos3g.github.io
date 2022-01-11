@@ -2,19 +2,16 @@ import styled from 'styled-components';
 import devices from '../../styles/breakpoints';
 import externalLinkIMG from '../../assets/icons/external-link.svg';
 
-export const Container = styled.div`
+export const Wrapper = styled.a.attrs({
+  target: '_blank',
+})`
+  display: flex;
   position: relative;
-  margin-bottom: 1.5rem;
-
   padding: 1px 1px 1px 8px;
-  cursor: pointer;
-
-  width: 50vw;
-  height: 7rem;
-
   background: linear-gradient(180deg, #4d19e6, #b219e6);
   border-radius: 8px;
-
+  height: 7rem;
+  width: 50vw;
   z-index: 1;
 
   &::before {
@@ -22,15 +19,12 @@ export const Container = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-
-    width: 100%;
     height: 100%;
-
-    background: linear-gradient(45deg, #4d19e6, #b219e6);
+    width: 100%;
+    background: var(--gradient-primary);
     border-radius: inherit;
-
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 1s linear;
     z-index: -1;
   }
 
@@ -43,28 +37,17 @@ export const Container = styled.div`
   }
 `;
 
-export const Button = styled.a.attrs({
-  target: '_blank',
-})`
+export const Content = styled.div`
+  flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  border-radius: 8px;
-  width: 100%;
-  height: 100%;
-
-  font-size: 2.4rem;
+  justify-content: space-between;
+  padding: 0 2rem;
   background-color: #202022;
+  border-radius: inherit;
+  font-size: 2.4rem;
 `;
 
 export const LinkIcon = styled.img.attrs({
   src: externalLinkIMG,
-  align: 'right',
-})`
-  width: 22px;
-  height: 22px;
-
-  position: absolute;
-  right: 2rem;
-`;
+})``;

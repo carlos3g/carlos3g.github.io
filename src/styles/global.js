@@ -4,8 +4,7 @@ export default createGlobalStyle`
 :root {
   --color-background: #141414;
   --color-text: #f8f8f2;
-  --color-green: #50fa7b;
-  --color-black: #141414;
+  --gradient-primary: linear-gradient(45deg, #4d19e6, #b219e6, #e619b3);
 
   font-size: 62.5%;
 }
@@ -17,22 +16,12 @@ export default createGlobalStyle`
   font-family: 'Gothic A1', sans-serif;
   color: var(--color-text);
   box-sizing: border-box;
-
-  &:first-child {
-  margin-top: 0 !important;
-  margin-left: 0 !important;
-  }
-
-  &:last-child {
-    margin-bottom: 0 !important;
-    margin-right: 0 !important;
-  }
 }
 
 html,
 body,
 #root {
-  height: 100vh;
+  min-height: 100vh;
   scroll-behavior: smooth;
   background-color: var(--color-background);
 }
@@ -42,7 +31,7 @@ body,
 }
 
 #top-line {
-  background: linear-gradient(45deg, #4d19e6, #b219e6, #e619b3);
+  background: var(--gradient-primary);
   position: fixed;
   top: 0;
   left: 0;
