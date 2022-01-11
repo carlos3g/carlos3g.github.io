@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-
 import devices from '../../styles/breakpoints';
 import linkedinSVG from '../../assets/icons/linkedin.svg';
 import githubSVG from '../../assets/icons/github.svg';

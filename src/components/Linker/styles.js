@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 import devices from '../../styles/breakpoints';
 import externalLinkIMG from '../../assets/icons/external-link.svg';
 

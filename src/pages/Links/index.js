@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Profile, Linker } from '../../components';
 import { Container, Linkers } from './styles';
 
@@ -19,7 +17,7 @@ const sites = [
   { title: 'Medium', href: '	https://medium.com/@carlos3g' },
 ];
 
-function Links() {
+const Links = () => {
   const renderLinkers = () =>
     sites.map((s, i) => <Linker href={s.href} title={s.title} key={i} />);
 
@@ -29,6 +27,6 @@ function Links() {
       <Linkers>{renderLinkers()}</Linkers>
     </Container>
   );
-}
+};
 
 export default Links;

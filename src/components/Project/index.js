@@ -1,5 +1,4 @@
-import React, { memo } from 'react';
-
+import { memo } from 'react';
 import {
   Body,
   Container,
@@ -13,8 +12,9 @@ import {
   Title,
 } from './styles';
 
-function Project({ data }) {
+const Project = ({ data }) => {
   const { techs, html_url, name, description, stargazers_count } = data;
+
   return (
     <Container href={html_url}>
       <Header>
@@ -34,6 +34,6 @@ function Project({ data }) {
       </Footer>
     </Container>
   );
-}
+};
 
 export default memo(Project);

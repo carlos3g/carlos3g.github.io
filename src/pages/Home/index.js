@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';
-
+import { useEffect, useState } from 'react';
 import axios from '../../services/api';
-
 import { Project } from '../../components';
 import {
   Container,
@@ -33,7 +31,7 @@ const socialMedias = [
   { url: 'mailto:carlosmesquita156@gmail.com', icon: <GmailIcon /> },
 ];
 
-function Home() {
+const Home = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -86,6 +84,6 @@ function Home() {
       </Projects>
     </Container>
   );
-}
+};
 
 export default Home;

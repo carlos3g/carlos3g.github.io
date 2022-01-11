@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-
 import devices from '../../styles/breakpoints';
-
 import starSVG from '../../assets/icons/star.svg';
 
 export const Container = styled.a.attrs({
