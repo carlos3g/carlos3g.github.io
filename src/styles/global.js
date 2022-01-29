@@ -36,7 +36,7 @@ body,
   top: 0;
   left: 0;
   width: 100vw;
-  height: 2px;
+  height: 4px;
 }
 
 /* selection */
