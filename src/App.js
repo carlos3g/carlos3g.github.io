@@ -1,11 +1,12 @@
-import Routes from './routes';
-import GlobalStyle from './styles/global';
+import { Route, Routes } from 'react-router-dom';
+import { Home, Links, NotFound } from './pages';
 
 const App = () => (
-  <>
-    <GlobalStyle />
-    <Routes />
-  </>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/links" element={<Links />} />
+    <Route element={<NotFound />} />
+  </Routes>
 );
 
 export default App;
