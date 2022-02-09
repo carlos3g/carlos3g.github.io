@@ -1,6 +1,15 @@
+import { FC } from 'react';
 import { Container, Avatar, Name, Description, Details } from './styles';
 
-const Profile = ({ user }) => (
+interface ProfileProps {
+  user: {
+    avatar: string;
+    name: string;
+    description: string;
+  };
+}
+
+const Profile: FC<ProfileProps> = ({ user }) => (
   <Container>
     <Avatar src={user.avatar} alt={user.name} />
     <Details>

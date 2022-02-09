@@ -13,7 +13,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Linkers = styled.div`
+export const Anchors = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;

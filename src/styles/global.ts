@@ -39,7 +39,6 @@ body,
   height: 4px;
 }
 
-/* selection */
 ::-moz-selection {
   color: var(--color-text);
   background: #4d19e6;
@@ -50,7 +49,6 @@ body,
   background: #4d19e6;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;

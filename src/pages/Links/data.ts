@@ -1,6 +1,3 @@
-import { Profile, Linker } from '../../components';
-import { Container, Linkers } from './styles';
-
 const user = {
   name: 'Carlos Mesquita',
   description: 'Software engineer',
@@ -17,14 +14,4 @@ const sites = [
   { title: 'Medium', href: '	https://medium.com/@carlos3g' },
 ];
 
-const renderLinkers = () =>
-  sites.map((s) => <Linker href={s.href} title={s.title} key={s.href} />);
-
-const Links = () => (
-  <Container>
-    <Profile user={user} />
-    <Linkers>{renderLinkers()}</Linkers>
-  </Container>
-);
-
-export default Links;
+export { user, sites };

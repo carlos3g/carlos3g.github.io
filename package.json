@@ -43,6 +43,23 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "@tsconfig/create-react-app": "^1.0.2",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.16",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@types/styled-components": "^5.1.22",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^3.1.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5"
   }
 }

@@ -8,29 +8,10 @@ export const Wrapper = styled.a.attrs({
   display: flex;
   position: relative;
   padding: 1px 1px 1px 8px;
-  background: linear-gradient(180deg, #4d19e6, #b219e6);
+  background: var(--gradient-primary);
   border-radius: 8px;
   height: 7rem;
   width: 50vw;
-  z-index: 1;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: var(--gradient-primary);
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 1s linear;
-    z-index: -1;
-  }
-
-  &:hover::before {
-    opacity: 1;
-  }
 
   @media ${devices.mobileL} {
     width: 80vw;

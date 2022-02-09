@@ -1,8 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 import devices from '../../styles/breakpoints';
-import linkedinSVG from '../../assets/icons/linkedin.svg';
-import githubSVG from '../../assets/icons/github.svg';
-import gmailSVG from '../../assets/icons/gmail.svg';
 
 const spinAnimation = keyframes`
   to {
@@ -69,31 +66,12 @@ export const SocialMedias = styled.div`
   }
 `;
 
-export const IconWrapper = styled.a.attrs({
-  target: '_blank',
-})``;
-
-export const LinkedinIcon = styled.img.attrs({
-  src: linkedinSVG,
-  width: 20,
-})``;
-
-export const GithubIcon = styled.img.attrs({
-  src: githubSVG,
-  width: 20,
-})``;
-
-export const GmailIcon = styled.img.attrs({
-  src: gmailSVG,
-  width: 20,
-})``;
-
-export const Projects = styled.div`
+export const Projects = styled.div<{ loaded: boolean }>`
   flex: 1.5;
   display: flex;
   flex-direction: column;
-  align-items: ${({ loading }) => (loading ? 'center' : 'flex-end')};
-  justify-content: ${({ loading }) => (loading ? 'center' : 'default')};
+  align-items: ${({ loaded }) => (loaded ? 'center' : 'flex-end')};
+  justify-content: ${({ loaded }) => (loaded ? 'center' : 'default')};
   overflow: auto;
 
   ::-webkit-scrollbar {

@@ -1,49 +1,32 @@
-import { useEffect, useState, useCallback } from 'react';
-import api from '../../services/api';
+import { FC, useCallback, useEffect, useState } from 'react';
 import { Project } from '../../components';
+import api from '../../services/api';
+import { IProject } from '../../types';
+import { projectNames, socialMedias } from './data';
 import {
-  Container,
   AboutMe,
-  Title,
+  Container,
   Description,
-  Projects,
-  SocialMedias,
-  IconWrapper,
-  LinkedinIcon,
-  GithubIcon,
-  GmailIcon,
   Details,
   Loader,
+  Projects,
+  SocialMedias,
+  Title,
 } from './styles';
-
-const projectNames = [
-  'carlos3g/faire',
-  'carlos3g/expo-anime-finder',
-  'carlos3g/expo-bmi-calc',
-  'carlos3g/proffy',
-  'carlos3g/boxy',
-  'carlos3g/getkcal',
-];
-
-const socialMedias = [
-  { url: 'https://linkedin.com/in/carlos3g', icon: <LinkedinIcon /> },
-  { url: 'https://github.com/carlos3g', icon: <GithubIcon /> },
-  { url: 'mailto:carlosmesquita156@gmail.com', icon: <GmailIcon /> },
-];
 
 const renderSocialMedias = () =>
   socialMedias.map((s) => (
-    <IconWrapper href={s.url} key={s.url}>
-      {s.icon}
-    </IconWrapper>
+    <a target="_blank" rel="noreferrer" href={s.url} key={s.url}>
+      <img src={s.icon} alt="" width={20} />
+    </a>
   ));
 
-const Home = () => {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+const Home: FC = () => {
+  const [projects, setProjects] = useState<IProject[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   const renderProjects = useCallback(
-    () => projects.map((p, i) => <Project data={p} key={i} />),
+    () => projects.map((p) => <Project data={p} key={p.name} />),
     [projects]
   );
 
@@ -53,22 +36,22 @@ const Home = () => {
       const techs = Object.keys((await api.get(`/repos/${pN}/languages`)).data);
       return { ...project, techs };
     });
-    const results = await Promise.all(promises);
+    const result = await Promise.all(promises);
 
-    setProjects(results);
+    setProjects(result);
     setLoading(false);
   }, []);
 
-  useEffect(fetchProjects, [fetchProjects]);
+  useEffect(() => {
+    fetchProjects();
+  }, [fetchProjects]);
 
   return (
     <Container>
       <AboutMe>
         <Details>
           <Title>
-            Hello, I’m
-            <br />
-            Carlos Mesquita.
+            Hello, I&#39;m <br /> Carlos Mesquita.
           </Title>
           <Description>
             Eu sou o Carlos, um jovem apaixonado por aprender coisas novas,
@@ -79,7 +62,7 @@ const Home = () => {
         <SocialMedias>{renderSocialMedias()}</SocialMedias>
       </AboutMe>
 
-      <Projects loading={loading}>
+      <Projects loaded={loading}>
         {loading ? <Loader /> : renderProjects()}
       </Projects>
     </Container>
