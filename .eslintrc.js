@@ -28,5 +28,7 @@ module.exports = {
     'react/style-prop-object': 0,
     'import/prefer-default-export': 0,
     '@typescript-eslint/unbound-method': 0,
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error'],
   },
 };
