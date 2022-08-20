@@ -18,12 +18,11 @@
   - [Screenshots](#-screenshots)
   - [Technologies](#-technologies)
   - [How to run](#-how-to-run)
-- [How to contribute](#-how-to-contribute)
 - [License](#-license)
 
 ## 💻 About the project
 
-Portfolio made by me to show some of my projects and useful information to employers
+Portfolio made by me to show some of my projects and useful information about me
 
 ### 📷 Screenshots
 
@@ -35,38 +34,22 @@ Portfolio made by me to show some of my projects and useful information to emplo
 
 The following technologies were used in the construction of the project:
 
-- [React](https://pt-br.reactjs.org)
-- [Github Pages](https://pages.github.com)
+- [React](https://reactjs.org)
+- [Typescript](https://www.typescriptlang.org)
 
 ### 🚀 How to run
 
-1. Clone the repository
+```bash
+# Clone the repository
+git clone https://github.com/carlos3g/faire.git
 
-   ```bash
-   git clone https://github.com/carlos3g/carlos3g.github.io.git
-   ```
+# Install the dependencies
+cd faire
+yarn install
 
-2. Install the dependencies
-
-   ```bash
-   cd carlos3g.github.io
-   yarn install
-   ```
-
-3. Run the application
-   ```bash
-   yarn start
-   ```
-
-## 🤝 How to contribute
-
-Every kind of contribution is welcome, we admire it!
-
-Is there any problem? Found a bug? Do you have any tips? Open an [issue](https://github.com/carlos3g/carlos3g.github.io/issues) describing it.
-
-Want to contribute code? We ask that you first read [this contribution guide](https://github.com/firstcontributions/first-contributions)
-
-Don't forget to leave your ⭐, it is also a way to contribute to the project;)
+# Run the project
+yarn start
+```
 
 ## 📝 License
 
