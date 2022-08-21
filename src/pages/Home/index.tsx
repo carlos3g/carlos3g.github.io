@@ -2,7 +2,7 @@ import { FC, useCallback, useEffect, useState } from 'react';
 
 import { Project } from './components';
 import { githubService } from '../../services';
-import { IProject } from '../../types';
+import { IProject } from '../../interfaces';
 import { projectNames, socialMedias } from './data';
 import {
   AboutMe,

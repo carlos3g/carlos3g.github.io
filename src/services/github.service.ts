@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { IProject } from '../types';
+import { IProject } from '../interfaces';
 
 const api = axios.create({
   baseURL: 'https://api.github.com',
