@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import devices from '../../styles/breakpoints';
+import { breakpoints } from '../../constants/style';
 
 const spinAnimation = keyframes`
   to {
@@ -13,7 +13,7 @@ export const Container = styled.div`
   padding: 14vh;
   height: 100vh;
 
-  @media ${devices.mobileL} {
+  @media ${breakpoints.mobileL} {
     flex-direction: column;
     padding: 5vh;
   }
@@ -25,7 +25,7 @@ export const AboutMe = styled.div`
   justify-content: space-between;
   flex-direction: column;
 
-  @media ${devices.mobileL} {
+  @media ${breakpoints.mobileL} {
     width: auto;
     margin-bottom: 4rem;
   }
@@ -46,7 +46,7 @@ export const Description = styled.p`
   margin-top: 3.2rem;
   width: 80%;
 
-  @media ${devices.mobileL} {
+  @media ${breakpoints.mobileL} {
     width: auto;
   }
 `;
@@ -60,7 +60,7 @@ export const SocialMedias = styled.div`
     margin-left: 3.8rem;
   }
 
-  @media ${devices.mobileL} {
+  @media ${breakpoints.mobileL} {
     justify-content: center;
     margin-top: 2rem;
   }
@@ -82,7 +82,7 @@ export const Projects = styled.div<{ loaded: boolean }>`
     margin-top: 8px;
   }
 
-  @media ${devices.mobileL} {
+  @media ${breakpoints.mobileL} {
     width: auto;
     align-items: center;
     overflow: visible;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import devices from '../../../../styles/breakpoints';
+import { breakpoints } from '../../../../constants/style';
 import starSVG from '../../../../assets/icons/star.svg';
 
 export const Container = styled.a.attrs({
@@ -19,7 +19,7 @@ export const Container = styled.a.attrs({
     border-color: var(--color-text);
   }
 
-  @media ${devices.mobileL} {
+  @media ${breakpoints.mobileL} {
     width: 100%;
     padding: 2.8rem;
   }

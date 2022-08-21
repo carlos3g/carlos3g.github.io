@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import devices from '../../styles/breakpoints';
+import { breakpoints } from '../../constants/style';
 
 export const Container = styled.div`
   flex: 1;
@@ -8,7 +8,7 @@ export const Container = styled.div`
   flex-direction: column;
   padding: 10vh 0;
 
-  @media ${devices.mobileL} {
+  @media ${breakpoints.mobileL} {
     flex-direction: column;
   }
 `;

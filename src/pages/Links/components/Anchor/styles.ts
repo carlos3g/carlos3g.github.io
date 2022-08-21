@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import devices from '../../../../styles/breakpoints';
+import { breakpoints } from '../../../../constants/style';
 import externalLinkIMG from '../../../../assets/icons/external-link.svg';
 
 export const Wrapper = styled.a.attrs({
@@ -13,7 +13,7 @@ export const Wrapper = styled.a.attrs({
   height: 7rem;
   width: 50vw;
 
-  @media ${devices.mobileL} {
+  @media ${breakpoints.mobileL} {
     width: 80vw;
   }
 `;
