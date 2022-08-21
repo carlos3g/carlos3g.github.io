@@ -1,6 +1,7 @@
 import { FC, useCallback, useEffect, useState } from 'react';
+
 import { Project } from '../../components';
-import api from '../../services/api';
+import { githubService } from '../../services';
 import { IProject } from '../../types';
 import { projectNames, socialMedias } from './data';
 import {
@@ -31,12 +32,7 @@ const Home: FC = () => {
   );
 
   const fetchProjects = useCallback(async () => {
-    const promises = projectNames.map(async (pN) => {
-      const project = (await api.get(`/repos/${pN}`)).data;
-      const techs = Object.keys((await api.get(`/repos/${pN}/languages`)).data);
-      return { ...project, techs };
-    });
-    const result = await Promise.all(promises);
+    const result = await githubService.getRepositories(projectNames);
 
     setProjects(result);
     setLoading(false);
