@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 import { FC, memo } from 'react';
-import { IProject } from '../../types';
+import { IProject } from '../../../../types';
 import {
   Body,
   Container,

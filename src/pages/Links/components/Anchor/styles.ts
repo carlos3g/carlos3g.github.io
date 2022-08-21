@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import devices from '../../styles/breakpoints';
-import externalLinkIMG from '../../assets/icons/external-link.svg';
+import devices from '../../../../styles/breakpoints';
+import externalLinkIMG from '../../../../assets/icons/external-link.svg';
 
 export const Wrapper = styled.a.attrs({
   target: '_blank',
@@ -26,7 +26,11 @@ export const Content = styled.div`
   padding: 0 2rem;
   background-color: #202022;
   border-radius: inherit;
-  font-size: 2.4rem;
+  font-size: 2rem;
+
+  &:before {
+    content: '';
+  }
 `;
 
 export const LinkIcon = styled.img.attrs({

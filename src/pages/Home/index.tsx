@@ -1,6 +1,6 @@
 import { FC, useCallback, useEffect, useState } from 'react';
 
-import { Project } from '../../components';
+import { Project } from './components';
 import { githubService } from '../../services';
 import { IProject } from '../../types';
 import { projectNames, socialMedias } from './data';

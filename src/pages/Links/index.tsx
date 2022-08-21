@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { Anchor, Profile } from '../../components';
+
+import { Anchor, Profile } from './components';
 import { sites, user } from './data';
 import { Container, Anchors } from './styles';
 

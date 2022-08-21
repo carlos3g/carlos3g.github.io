@@ -9,7 +9,6 @@ interface AnchorProps {
 const Anchor: FC<AnchorProps> = ({ title, href }) => (
   <Wrapper href={href}>
     <Content>
-      <div />
       {title}
       <LinkIcon />
     </Content>
