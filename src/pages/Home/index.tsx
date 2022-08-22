@@ -3,7 +3,7 @@ import { FC, useCallback, useEffect, useState } from 'react';
 import { Project } from './components';
 import { githubService } from '../../services';
 import { IProject } from '../../interfaces';
-import { projectNames, socialMedias } from './data';
+import { getStaticData } from './data';
 import {
   AboutMe,
   Container,
@@ -14,6 +14,8 @@ import {
   SocialMedias,
   Title,
 } from './styles';
+
+const { projectNames, socialMedias } = getStaticData();
 
 const renderSocialMedias = () =>
   socialMedias.map((s) => (

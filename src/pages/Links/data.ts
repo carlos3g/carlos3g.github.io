@@ -14,4 +14,4 @@ const sites = [
   { title: 'Medium', href: '	https://medium.com/@carlos3g' },
 ];
 
-export { user, sites };
+export const getStaticData = () => ({ user, sites });

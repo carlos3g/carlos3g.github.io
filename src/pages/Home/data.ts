@@ -17,4 +17,4 @@ const socialMedias = [
   { url: 'mailto:carlosmesquita156@gmail.com', icon: gmailSVG },
 ];
 
-export { projectNames, socialMedias };
+export const getStaticData = () => ({ projectNames, socialMedias });
