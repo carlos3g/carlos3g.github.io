@@ -70,8 +70,8 @@ export const Projects = styled.div<{ loaded: boolean }>`
   flex: 1.5;
   display: flex;
   flex-direction: column;
-  align-items: ${({ loaded }) => (loaded ? 'center' : 'flex-end')};
-  justify-content: ${({ loaded }) => (loaded ? 'center' : 'default')};
+  align-items: ${({ loaded }) => (loaded ? 'flex-end' : 'center')};
+  justify-content: ${({ loaded }) => (loaded ? 'default' : 'center')};
   overflow: auto;
 
   ::-webkit-scrollbar {

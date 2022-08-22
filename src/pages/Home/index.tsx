@@ -28,7 +28,6 @@ const { githubProjects, user } = getStaticData();
 
 const Home: FC = () => {
   const [projects, setProjects] = useState<IProject[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
 
   const renderProjects = () =>
     projects.map((p) => <Project data={p} key={p.name} />);
@@ -37,7 +36,6 @@ const Home: FC = () => {
     const result = await githubService.getRepositories(githubProjects);
 
     setProjects(result);
-    setLoading(false);
   }, []);
 
   useEffect(() => {
@@ -63,8 +61,8 @@ const Home: FC = () => {
         </SocialMedias>
       </AboutMe>
 
-      <Projects loaded={loading}>
-        {loading ? <Loader /> : renderProjects()}
+      <Projects loaded={!!projects.length}>
+        {projects.length ? renderProjects() : <Loader />}
       </Projects>
     </Container>
   );
