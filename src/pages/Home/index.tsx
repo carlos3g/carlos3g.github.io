@@ -17,21 +17,12 @@ import {
 
 const { projectNames, socialMedias } = getStaticData();
 
-const renderSocialMedias = () =>
-  socialMedias.map((s) => (
-    <a target="_blank" rel="noreferrer" href={s.url} key={s.url}>
-      <img src={s.icon} alt="" width={20} />
-    </a>
-  ));
-
 const Home: FC = () => {
   const [projects, setProjects] = useState<IProject[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
-  const renderProjects = useCallback(
-    () => projects.map((p) => <Project data={p} key={p.name} />),
-    [projects]
-  );
+  const renderProjects = () =>
+    projects.map((p) => <Project data={p} key={p.name} />);
 
   const fetchProjects = useCallback(async () => {
     const result = await githubService.getRepositories(projectNames);
@@ -57,7 +48,14 @@ const Home: FC = () => {
             no Instituto Federal do Piauí.
           </Description>
         </Details>
-        <SocialMedias>{renderSocialMedias()}</SocialMedias>
+
+        <SocialMedias>
+          {socialMedias.map((s) => (
+            <a target="_blank" rel="noreferrer" href={s.url} key={s.url}>
+              <img src={s.icon} alt="" width={20} />
+            </a>
+          ))}
+        </SocialMedias>
       </AboutMe>
 
       <Projects loaded={loading}>
