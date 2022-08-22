@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import { Project } from './components';
 import { githubService } from '../../services';
@@ -32,15 +32,15 @@ const Home: FC = () => {
   const renderProjects = () =>
     projects.map((p) => <Project data={p} key={p.name} />);
 
-  const fetchProjects = useCallback(async () => {
-    const result = await githubService.getRepositories(githubProjects);
-
-    setProjects(result);
-  }, []);
-
   useEffect(() => {
+    const fetchProjects = async () => {
+      const result = await githubService.getRepositories(githubProjects);
+
+      setProjects(result);
+    };
+
     fetchProjects();
-  }, [fetchProjects]);
+  }, []);
 
   return (
     <Container>
