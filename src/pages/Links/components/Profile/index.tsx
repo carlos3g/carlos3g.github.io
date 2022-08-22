@@ -5,7 +5,7 @@ interface ProfileProps {
   user: {
     avatar: string;
     name: string;
-    description: string;
+    role: string;
   };
 }
 
@@ -14,7 +14,7 @@ const Profile: FC<ProfileProps> = ({ user }) => (
     <Avatar src={user.avatar} alt={user.name} />
     <Details>
       <Name>{user.name}</Name>
-      <Description>{user.description}</Description>
+      <Description>{user.role}</Description>
     </Details>
   </Container>
 );

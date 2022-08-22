@@ -1,6 +1,6 @@
 const user = {
   name: 'Carlos Mesquita',
-  description: 'Software engineer',
+  role: 'Software engineer',
   avatar: 'https://github.com/carlos3g.png',
 };
 

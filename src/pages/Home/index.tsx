@@ -15,7 +15,7 @@ import {
   Title,
 } from './styles';
 
-const { projectNames, socialMedias } = getStaticData();
+const { projectNames, socialMedias, user } = getStaticData();
 
 const Home: FC = () => {
   const [projects, setProjects] = useState<IProject[]>([]);
@@ -40,13 +40,9 @@ const Home: FC = () => {
       <AboutMe>
         <Details>
           <Title>
-            Hello, I&#39;m <br /> Carlos Mesquita.
+            Hello, I&#39;m <br /> {user.name}.
           </Title>
-          <Description>
-            Eu sou o Carlos, um jovem apaixonado por aprender coisas novas,
-            tecnologia, programação e algoritmos! Atualmente eu sou um estudante
-            no Instituto Federal do Piauí.
-          </Description>
+          <Description>{user.description}</Description>
         </Details>
 
         <SocialMedias>

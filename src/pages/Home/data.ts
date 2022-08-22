@@ -17,4 +17,10 @@ const socialMedias = [
   { url: 'mailto:carlosmesquita156@gmail.com', icon: gmailSVG },
 ];
 
-export const getStaticData = () => ({ projectNames, socialMedias });
+const user = {
+  name: 'Carlos Mesquita',
+  description:
+    'Eu sou o Carlos, um jovem apaixonado por aprender coisas novas, tecnologia, programação e algoritmos! Atualmente eu sou um estudante no Instituto Federal do Piauí.',
+};
+
+export const getStaticData = () => ({ projectNames, socialMedias, user });
