@@ -3,7 +3,10 @@ import { FC, useCallback, useEffect, useState } from 'react';
 import { Project } from './components';
 import { githubService } from '../../services';
 import { IProject } from '../../interfaces';
-import { getStaticData } from './data';
+import { getStaticData } from '../../data';
+import linkedinSVG from '../../assets/icons/linkedin.svg';
+import githubSVG from '../../assets/icons/github.svg';
+import gmailSVG from '../../assets/icons/gmail.svg';
 import {
   AboutMe,
   Container,
@@ -15,7 +18,13 @@ import {
   Title,
 } from './styles';
 
-const { projectNames, socialMedias, user } = getStaticData();
+const socialMedias = [
+  { url: 'https://linkedin.com/in/carlos3g', icon: linkedinSVG },
+  { url: 'https://github.com/carlos3g', icon: githubSVG },
+  { url: 'mailto:carlosmesquita156@gmail.com', icon: gmailSVG },
+];
+
+const { githubProjects, user } = getStaticData();
 
 const Home: FC = () => {
   const [projects, setProjects] = useState<IProject[]>([]);
@@ -25,7 +34,7 @@ const Home: FC = () => {
     projects.map((p) => <Project data={p} key={p.name} />);
 
   const fetchProjects = useCallback(async () => {
-    const result = await githubService.getRepositories(projectNames);
+    const result = await githubService.getRepositories(githubProjects);
 
     setProjects(result);
     setLoading(false);
