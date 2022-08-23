@@ -1,26 +1,27 @@
 import styled from 'styled-components';
-import { breakpoints } from '../../../../constants/style';
+
 import starSVG from '../../../../assets/icons/star.svg';
+import { breakpoints } from '../../../../constants/style';
 
 export const Container = styled.a.attrs({
   target: '_blank',
+  rel: 'noreferrer',
 })`
   background-color: #202022;
   padding: 4rem;
-  width: 47.5vw;
+  width: 100%;
   border: 1px solid transparent;
   transition: border-color 1s 0.1s;
-
-  & > div + div {
-    margin-top: 1rem;
-  }
 
   &:hover {
     border-color: var(--color-text);
   }
 
+  & > * + * {
+    margin-top: 1rem;
+  }
+
   @media ${breakpoints.mobileL} {
-    width: 100%;
     padding: 2.8rem;
   }
 `;
@@ -52,7 +53,7 @@ export const Description = styled.p`
 
 export const Footer = styled.div``;
 
-export const Stars = styled.div`
+export const StarCounter = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -68,5 +69,6 @@ export const StarIcon = styled.img.attrs({
   src: starSVG,
   width: 12,
 })`
-  margin: 0 5px 4px 0;
+  margin-right: 5px;
+  padding-bottom: 4px;
 `;

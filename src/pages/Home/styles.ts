@@ -56,7 +56,7 @@ export const SocialMedias = styled.div`
   flex-direction: row;
   align-items: center;
 
-  a + a {
+  & > * + * {
     margin-left: 3.8rem;
   }
 
@@ -67,23 +67,22 @@ export const SocialMedias = styled.div`
 `;
 
 export const Projects = styled.div<{ loaded: boolean }>`
-  flex: 1.5;
+  flex: 1.2;
   display: flex;
   flex-direction: column;
-  align-items: ${({ loaded }) => (loaded ? 'flex-end' : 'center')};
-  justify-content: ${({ loaded }) => (loaded ? 'default' : 'center')};
+  align-items: ${({ loaded }) => !loaded && 'center'};
+  justify-content: ${({ loaded }) => !loaded && 'center'};
   overflow: auto;
 
   ::-webkit-scrollbar {
     display: none;
   }
 
-  a + a {
+  & > * + * {
     margin-top: 8px;
   }
 
   @media ${breakpoints.mobileL} {
-    width: auto;
     align-items: center;
     overflow: visible;
   }

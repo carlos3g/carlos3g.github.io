@@ -1,21 +1,15 @@
 import styled from 'styled-components';
-import { breakpoints } from '../../../../constants/style';
 import externalLinkIMG from '../../../../assets/icons/external-link.svg';
 
 export const Wrapper = styled.a.attrs({
   target: '_blank',
 })`
   display: flex;
-  position: relative;
   padding: 1px 1px 1px 8px;
   background: var(--gradient-primary);
   border-radius: 8px;
   height: 7rem;
-  width: 50vw;
-
-  @media ${breakpoints.mobileL} {
-    width: 80vw;
-  }
+  width: 100%;
 `;
 
 export const Content = styled.div`

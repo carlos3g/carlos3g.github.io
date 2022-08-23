@@ -8,7 +8,7 @@ import {
   Footer,
   Header,
   StarIcon,
-  Stars,
+  StarCounter,
   Techs,
   Title,
 } from './styles';
@@ -32,10 +32,10 @@ const Project: FC<ProjectProps> = ({ data }) => {
       </Body>
 
       <Footer>
-        <Stars>
+        <StarCounter>
           <StarIcon />
           {stargazers_count}
-        </Stars>
+        </StarCounter>
       </Footer>
     </Container>
   );

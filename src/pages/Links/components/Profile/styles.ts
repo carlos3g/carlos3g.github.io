@@ -8,7 +8,7 @@ export const Container = styled.div`
 
 export const Avatar = styled.img`
   width: 10rem;
-  height: 10rem;
+  aspect-ratio: 1;
   border-radius: 50%;
 `;
 
